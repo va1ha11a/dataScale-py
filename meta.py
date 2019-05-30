@@ -1,8 +1,9 @@
 import redis
 
 from redisgraph import Node, Edge, Graph
+import settings as st
 
-r = redis.Redis(host='localhost', port=6379)
+r = redis.Redis(host=st.meta_server, port=st.meta_port)
 redis_graph = Graph('chunks', r)
 
 def create_file_meta(file_name, graph_obj=redis_graph):
