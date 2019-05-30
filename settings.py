@@ -3,9 +3,9 @@ source_file_name = 'data/test.csv'
 restore_file_name = 'rdata/test.csv'
 bucket_location = 'home'
 
-minio_server = '127.0.0.1:9001'
-minio_access_key = "OY8VL6LBNEP0EBWTJOLB"
-minio_secret_key = "6lrqDZDnlg0eRZll4mkdN+Fuj6JuSCUKPWHMfqQd"
+minio_server = '127.0.0.1:9000'
+minio_access_key = "DPPAG32FXK2QZ8OOSC93"
+minio_secret_key = "Qv9U1C4RhErZqgmERbe9XlEOPwRTwE++ONhjrqbg"
 minio_secure=False
 
 meta_server = 'localhost'
