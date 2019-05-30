@@ -3,11 +3,14 @@ from minio import Minio
 from minio.error import (ResponseError, BucketAlreadyOwnedByYou,
                          BucketAlreadyExists)
 
+import settings as st
+
+
 # Initialize minioClient with an endpoint and access/secret keys.
-minioClient = Minio('127.0.0.1:9001',
-                  access_key="OY8VL6LBNEP0EBWTJOLB",
-                  secret_key="6lrqDZDnlg0eRZll4mkdN+Fuj6JuSCUKPWHMfqQd",
-                  secure=False)
+minioClient = Minio(st.minio_server,
+                  access_key=st.minio_access_key,
+                  secret_key=st.minio_secret_key,
+                  secure=st.minio_secure)
 
 def get_or_create_bucket(bucket_name, bucket_location, minio_connection=minioClient):
        if not minio_connection.bucket_exists(bucket_name):
