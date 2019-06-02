@@ -1,7 +1,9 @@
 # dataScale-py
-## Proof of Concept for Data Deduplication.
-## Using S3 like storage (minio) and a metatdata db (redisgraph)
 
+### Proof of Concept for Data Deduplication.
+### Using S3 like storage (minio) and a metatdata db (redisgraph)
+
+## Background
 This is unlikly to be performant but is for testing the theory (mostly for education pourpouses)
 
 Files are broken into blocks and a hash is generated.
