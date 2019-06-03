@@ -2,3 +2,4 @@ data/test.csv
 rdata/test.csv
 __pycache__/*
 settings.py
+testing.py
