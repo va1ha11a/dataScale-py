@@ -11,6 +11,8 @@ yapf = "*"
 minio = "*"
 redis = "*"
 redisgraph = "*"
+pypher = "*"
+python-cypher = "*"
 
 [requires]
 python_version = "3.7"

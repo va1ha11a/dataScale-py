@@ -3,6 +3,7 @@ import settings as st
 from meta import create_file_meta, create_chunk_node, redis_graph
 from chunk_tools import hash_chunk, get_chunks, store_chunk, restore_chunk
 from redisgraph import Node, Edge, Graph
+from pypher import Pypher
 
 if __name__ == "__main__":
     source_file_name = st.source_file_name
@@ -19,10 +20,11 @@ if __name__ == "__main__":
 
     redis_graph.commit()
 
-    query = """MATCH (f:file)-[h:has_chunk]->(c:chunk)
-            RETURN f.name, h.seq, c.hash ORDER BY h.seq"""
+    query = Pypher()
+    query.Match.node('f', labels='file').rel_out('h', labels='has_chunk').node(
+        'c', labels='chunk').RETURN('f.name', 'h.seq', 'c.hash').OrderBy('h.seq')
 
-    result = redis_graph.query(query)
+    result = redis_graph.query(str(query))
 
     # Print resultset
     result.pretty_print()
