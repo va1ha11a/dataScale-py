@@ -20,7 +20,7 @@ services:
       - ~/.gitconfig:/root/.gitconfig
 
       # Uncomment the next line if you plan to install the Docker CLI. See the docker-in-docker-compose definition for details.
-      # - /var/run/docker.sock:/var/run/docker.sock 
+      - /var/run/docker.sock:/var/run/docker.sock 
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity 
