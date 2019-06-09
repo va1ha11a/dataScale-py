@@ -10,7 +10,9 @@
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "python --version",
 	"extensions": [
-		"ms-python.python"
+		"ms-python.python",
+		"PeterJausovec.vscode-docker",
+		"formulahendry.code-runner"
 	],
 	"settings": {
 		"python.pythonPath": "/usr/local/bin/python",
