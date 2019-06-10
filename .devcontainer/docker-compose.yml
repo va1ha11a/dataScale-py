@@ -26,9 +26,9 @@ services:
     command: sleep infinity 
     
   redisgraph:
-    image: "redislabs/redisgraph:latest"
-    
+    image: "redislabs/redisgraph:1.2.2"
+
   minio:
-    image: "minio/minio:latest"
+    image: "minio/minio:RELEASE.2019-06-04T01-15-58Z"
     command: ["server", "/data"]
     env_file: minio.env
