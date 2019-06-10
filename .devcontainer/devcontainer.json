@@ -17,6 +17,9 @@
 	"settings": {
 		"python.pythonPath": "/usr/local/bin/python",
 		"python.linting.pylintEnabled": true,
-		"python.linting.enabled": true
+		"python.linting.enabled": true,
+		"remote.extensionKind": {
+			"peterjausovec.vscode-docker": "workspace"
+		}
 	}
 }

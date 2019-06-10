@@ -27,11 +27,8 @@ services:
     
   redisgraph:
     image: "redislabs/redisgraph:latest"
-    ports:
-      - 6379:6379
+    
   minio:
     image: "minio/minio:latest"
-    ports:
-      - 9000:9000
     command: ["server", "/data"]
     env_file: minio.env
