@@ -17,7 +17,7 @@ class ChunkTests(unittest.TestCase):
             "Hash is not what is expected")
 
     def test_get_file_chunks(self):
-        test_file_name = 'data/test.csv'
+        test_file_name = 'tests/data/test.csv'
         chks = get_chunks(test_file_name)
         self.assertIsInstance(chks, GeneratorType)
         as_list = list(chks)

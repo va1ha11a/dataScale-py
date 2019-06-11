@@ -33,7 +33,7 @@ def restore_file(filename, graph_obj):
                              labels='chunk').RETURN('f.name', 'h.seq',
                                                     'c.hash').OrderBy('h.seq')
         result = graph_obj.query(str(query))
-        result.pretty_print()
+        #result.pretty_print()
         with open(filename, 'wb') as f:
             for row in result.result_set[1:]:
                 chunk = restore_chunk(row[2].decode("utf-8"))
