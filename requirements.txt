@@ -1,6 +1,6 @@
 astropy==7.2.0
 autopep8==1.4.4
-certifi==2019.3.9
+certifi==2024.7.4
 minio==7.2.20
 numpy==1.22.0
 prompt-toolkit==2.0.9
