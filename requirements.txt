@@ -15,5 +15,5 @@ redisgraph==1.7
 scipy==1.3.0
 six==1.12.0
 urllib3==2.7.0
-wcwidth==0.1.7
+wcwidth==0.7.0
 yapf==0.27.0
